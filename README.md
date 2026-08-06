@@ -23,6 +23,8 @@ Use cases include memorial/monochrome modes, accessibility preferences, or desig
 - WordPress, tested up to **6.8**
 - No additional PHP dependencies
 
+---
+
 ### 🚀 Installation
 
 1. Upload the plugin ZIP via **Plugins → Add New → Upload Plugin** and click **Activate**.
@@ -38,6 +40,8 @@ Available under **Settings → Site Grayscale**:
 | Enable grayscale by default | Visitors can still toggle it off | ON |
 | Grayscale intensity (0–100) | `0` = no grayscale, `100` = full grayscale | 100 |
 | Show floating toggle button | Disable if you only want the shortcode | ON |
+
+---
 
 ### 🏆 Usage
 
@@ -89,6 +93,8 @@ wp option update sgtgle_show_button 1
 - **Does it work under a strict CSP?** Yes — since v1.1.1 there's no inline JS; the initial class/attributes are injected server-side.
 - **Only want the shortcode, not the floating button?** Uncheck **Show floating toggle button** in settings, then place `[grayscale_toggle]` where you want it.
 - **Conflicts with caching/CDN plugins?** Generally none — if changes don't show up, clear/purge your cache and CDN.
+
+---
 
 ### ⚡ Changelog
 
