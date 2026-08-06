@@ -41,6 +41,9 @@ Available under **Settings → Site Grayscale**:
 | Grayscale intensity (0–100) | `0` = no grayscale, `100` = full grayscale | 100 |
 | Show floating toggle button | Disable if you only want the shortcode | ON |
 
+> [!IMPORTANT]
+> A visitor's saved choice overrides **Enable grayscale by default**. Once anyone toggles the switch, `sgt_pref` in their `localStorage` wins on every later visit, so changing this setting appears to do nothing in your own browser. Verify default-state changes in a private window.
+
 ---
 
 ### 🏆 Usage
@@ -85,6 +88,9 @@ wp option update sgtgle_show_button 1
 ```
 
 ### ⚠️ Troubleshooting
+
+> [!IMPORTANT]
+> All plugin CSS ships as an inline `<style>` block via `wp_add_inline_style()`. A policy with `style-src 'self'` and no `'unsafe-inline'` blocks it and nothing turns gray — allow inline styles or attach a nonce to that block. The CSP-safe claim covers `script-src` only.
 
 - **Enabling grayscale didn't change my site** — check that intensity isn't set to `0`, and clear any stored visitor preference:
   ```js
